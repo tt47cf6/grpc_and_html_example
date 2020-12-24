@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "tt47cf6/minecraft/protos";
+
+message DummyRequest {}
+
+message SimpleResponse {
+	bool success = 1;
+	string message = 2;
+}
+
+service MyRPCServer {
+  rpc Dummy (DummyRequest) returns (SimpleResponse) {}
+}
